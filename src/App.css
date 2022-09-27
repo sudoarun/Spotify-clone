@@ -1,38 +1,286 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(images/bg/gradient.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #121212 !important;
+    width: 100%;
+    image-resolution: auto;
+    color: white !important;
+    min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    padding: 0;
+    margin: 0;
+    color: white !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.slick-next {
+    display: none !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.slick-prev {
+    display: none !important;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 480px) {
+    .desktop {
+        display: none !important;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (min-width: 480px) {
+    .spotify {
+        display: none;
+    }
+
+    .main {
+        display: none !important;
+    }
+
+    body {
+        background-image: none;
+    }
+}
+
+.desktop {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.desktop i {
+    display: block;
+}
+
+.spotify {
+    /* background-color: #303030; */
+    color: white;
+    /* display: none; */
+    min-height: 101vh;
+    /* z-index: 1000; */
+}
+
+.searchBar {
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.searchBar i,span {
+    color: #121212 !important;
+    padding-right: 10px;
+}
+
+.searchBar i {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.searchBar span {
+    /* font-weight: bolder; */
+    font-size: 15px;
+}
+
+.searchText {
+    color: white !important;
+    font-size: 30px;
+}
+
+.col img {
+    height: 155px;
+    /* border-radius: 50%; */
+    /* width: 86px; */
+}
+
+.col span {
+    display: flex;
+    justify-content: center;
+}
+
+.recent {
+    margin-bottom: 15px;
+}
+
+.m-menu li {
+    list-style: none;
+    margin: 2px 16px;
+    color: white;
+    font-size: 12px;
+}
+
+.m-menu a {
+    text-decoration: none;
+    margin: 2px 16px;
+    color: white;
+    font-size: 12px;
+}
+
+.settings {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    margin-right: 20px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.list {
+    margin-left: 1px !important;
+}
+
+.content {
+    margin-bottom: 100px;
+}
+
+.settings i {
+    font-size: 24px;
+}
+
+.user {
+    font-style: none !important;
+}
+
+.m-menu {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-items: center;
+    justify-content: space-around;
+    background-color: #222326;
+    padding: 5px;
+    border-radius: 30px;
+    width: 90%;
+    position: fixed;
+    bottom: 1%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.artist a{
+    font-size: 12px;
+}
+
+.m-menu a i {
+    display: flex;
+    justify-content: center;
+    font-size: 20px
+}
+
+.podcast {
+    padding-bottom: 53px;
+    padding-top: 7px;
+    padding-left: 12px;
+    border-radius: 10px;
+}
+
+.col span {
+    display: flex;
+    justify-content: left;
+}
+
+.search {
+    margin-bottom: 80px;
+    /* background-color: #121212 !important;
+    min-height: 100vh; */
+}
+
+a {
+    text-decoration: none;
+}
+
+.recentSearch input {
+    background-color: transparent;
+    margin-left: 12px;
+    border: none !important;
+    width: 84%;
+    outline: none;
+}
+
+.recentSearch {
+    background-color: #535353;
+    padding-left: 10px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+    display: flex;
+    justify-items: center;
+}
+
+.recentSearch i {
+    font-size: 40px;
+}
+
+.recentSearch input:focus-visible {
+    border: none !important;
+    outline: none;
+}
+
+.container h1 {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.container h2 {
+    font-size: 0.8125rem;
+    font-weight: 400;
+}
+
+.recentComp {
+    background-color: #121212 !important;
+    min-height: 100vh;
+}
+
+.playerList {
+    background-color: rgb(200, 32, 0);
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(rgb(200, 32, 0) 0%, black 44%);
+    min-height: 100vh;
+}
+.Playtime{
+    margin-left: 8px;
+    font-size: 11px;
+    color: lightgrey !important;
+}
+.bi-heart-fill,.bi-play-circle-fill{
+    color: #1ed760 !important;
+}
+.Fav i{
+    font-size: 20px;
+}
+
+.player-toggle{
+    display: flex!important;
+    justify-content: space-between;
+    margin-left: 12px;
+}
+.bi-play-circle-fill{
+    font-size: 60px;
+}
+.artistDetails{
+    font-size: 12px;
+    color: lightgray !important;
+    margin: 0;
+}
+h1{
+    color: white !important;
+}
+.songDetail span{
+    color: white !important;
 }
