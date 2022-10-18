@@ -37,7 +37,6 @@ function Player() {
                             
                         </span>
                         <p className='artistDetails'>Pritam,Arijit Singh </p>
-                        <p className='artistDetails'>Pritam,Arijit Singh </p>
                     </div>
                     <i class="bi bi-three-dots"></i>
                 </div>
