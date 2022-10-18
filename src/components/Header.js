@@ -15,7 +15,7 @@ function Header(){
                     <div>Library</div>
                 </Link>
                 <Link to={'premium'}><i className="bi bi-spotify"></i>
-                    <div>Premium</div>
+                    <div>Premiumm</div>
                 </Link>
             </div>
         </div>
